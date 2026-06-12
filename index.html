@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🌸 Blossom — Your Cozy Productivity Sanctuary</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192x192.png">
+  <meta name="theme-color" content="#FFB3D1">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Nunito:wght@300;400;500;600;700&family=Dancing+Script:wght@500;600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<canvas id="bg-canvas"></canvas>
+
+<!-- Decorative SVG creatures -->
+<div class="deco-wrap deco-cat-tl">
+  <svg viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg">
+    <!-- Sleeping cat -->
+    <ellipse cx="50" cy="60" rx="38" ry="22" fill="#FFB3D1" opacity="0.7"/>
+    <circle cx="50" cy="40" r="20" fill="#FFB3D1" opacity="0.7"/>
+    <polygon points="30,25 22,8 38,18" fill="#FF8FB5"/>
+    <polygon points="70,25 78,8 62,18" fill="#FF8FB5"/>
+    <path d="M38,42 Q50,50 62,42" fill="none" stroke="#FF6B9A" stroke-width="2" stroke-linecap="round"/>
+    <ellipse cx="44" cy="39" rx="5" ry="2" fill="#FF6B9A" opacity="0.5"/>
+    <ellipse cx="56" cy="39" rx="5" ry="2" fill="#FF6B9A" opacity="0.5"/>
+    <line x1="30" y1="44" x2="12" y2="40" stroke="#FF8FB5" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="30" y1="47" x2="10" y2="47" stroke="#FF8FB5" stroke-width="1.5" stroke-linecap="round"/>
+    <text x="44" y="82" font-size="10" fill="#FF6B9A" opacity="0.7">z z z</text>
+  </svg>
+</div>
+<div class="deco-wrap deco-whale-br">
+  <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
+    <ellipse cx="55" cy="45" rx="48" ry="28" fill="#A8DEFF" opacity="0.6"/>
+    <path d="M100,30 Q120,20 110,45 Q100,35 90,42" fill="#A8DEFF" opacity="0.5"/>
+    <circle cx="35" cy="38" r="4" fill="white" opacity="0.8"/>
+    <circle cx="36" cy="37" r="2" fill="#3a7ab0" opacity="0.6"/>
+    <path d="M28,52 Q45,60 62,52" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+    <path d="M60,18 Q65,8 70,4 Q72,14 66,20" fill="#A8DEFF" opacity="0.5"/>
+  </svg>
+</div>
+<div class="deco-wrap deco-jellyfish-tr">
+  <svg viewBox="0 0 60 80" xmlns="http://www.w3.org/2000/svg">
+    <ellipse cx="30" cy="25" rx="24" ry="20" fill="#EDE7FF" opacity="0.7"/>
+    <ellipse cx="30" cy="30" rx="20" ry="16" fill="#C9B8FF" opacity="0.4"/>
+    <path d="M14,38 Q10,55 14,65" stroke="#EDE7FF" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M20,40 Q16,57 20,70" stroke="#C9B8FF" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M30,41 Q30,58 30,72" stroke="#EDE7FF" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M40,40 Q44,57 40,70" stroke="#C9B8FF" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M46,38 Q50,55 46,65" stroke="#EDE7FF" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <circle cx="24" cy="22" r="3" fill="white" opacity="0.4"/>
+    <circle cx="38" cy="18" r="2" fill="white" opacity="0.3"/>
+  </svg>
+</div>
+<div class="deco-wrap deco-turtle-bl">
+  <svg viewBox="0 0 80 70" xmlns="http://www.w3.org/2000/svg">
+    <ellipse cx="40" cy="38" rx="28" ry="20" fill="#B8EEDA" opacity="0.7"/>
+    <circle cx="40" cy="38" r="18" fill="#80D0B0" opacity="0.5"/>
+    <circle cx="40" cy="20" r="10" fill="#B8EEDA" opacity="0.7"/>
+    <ellipse cx="15" cy="35" rx="8" ry="6" fill="#B8EEDA" opacity="0.6"/>
+    <ellipse cx="65" cy="35" rx="8" ry="6" fill="#B8EEDA" opacity="0.6"/>
+    <ellipse cx="20" cy="52" rx="7" ry="5" fill="#B8EEDA" opacity="0.6"/>
+    <ellipse cx="60" cy="52" rx="7" ry="5" fill="#B8EEDA" opacity="0.6"/>
+    <path d="M35,22 L40,14 L45,22" fill="none" stroke="#80D0B0" stroke-width="1.5" opacity="0.5"/>
+    <circle cx="36" cy="18" r="1.5" fill="#3a9070" opacity="0.6"/>
+    <circle cx="44" cy="18" r="1.5" fill="#3a9070" opacity="0.6"/>
+    <path d="M28,36 L36,34 M44,34 L52,36 M32,44 L40,46 L48,44" stroke="white" stroke-width="1" opacity="0.4"/>
+  </svg>
+</div>
+
+<!-- Focus Mode Overlay -->
+<div class="focus-overlay" id="focusOverlay">
+  <div class="focus-title">🌊 Focus Mode</div>
+  <div class="focus-sub">BREATHE · FOCUS · THRIVE</div>
+  <div class="focus-timer" id="focusTimerDisp">25:00</div>
+  <div class="focus-task" id="focusTaskLabel">Stay present. You've got this 🌸</div>
+  <div class="pomodoro-btns">
+    <button class="btn btn-ghost" onclick="toggleFocusTimer()" id="focusPlayBtn">▶ Start</button>
+    <button class="btn btn-ghost" onclick="resetFocusTimer()">↺ Reset</button>
+  </div>
+  <div class="focus-close" onclick="exitFocus()">✕ EXIT FOCUS MODE</div>
+</div>
+
+<!-- Add/Edit Task Modal -->
+<div class="modal-overlay" id="taskModal">
+  <div class="modal">
+    <div class="modal-title"><span>🌸</span> <span id="modalTitle">Add a Task</span></div>
+    <div class="form-group">
+      <label class="form-label">Task Title</label>
+      <input class="form-input" id="taskTitleInput" placeholder="What needs to be done? ✨" type="text">
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label">Category</label>
+        <select class="form-input" id="taskCatInput">
+          <option value="personal">🌸 Personal</option>
+          <option value="work">💼 Work</option>
+          <option value="health">🌿 Health</option>
+          <option value="study">📚 Study</option>
+          <option value="creative">🎨 Creative</option>
+          <option value="other">✨ Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Priority</label>
+        <select class="form-input" id="taskPriInput">
+          <option value="low">🟢 Low</option>
+          <option value="med">🟡 Medium</option>
+          <option value="high">🔴 High</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Due Date</label>
+      <input class="form-input" id="taskDateInput" type="date">
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" onclick="closeModal()">Cancel</button>
+      <button class="btn btn-primary" onclick="saveTask()">Save Task 🌸</button>
+    </div>
+  </div>
+</div>
+
+<!-- Toast container -->
+<div class="toast-container" id="toastContainer"></div>
+
+<!-- App Wrapper -->
+<div class="app-wrapper">
+  <!-- SIDEBAR -->
+  <nav class="sidebar" id="sidebar">
+    <div class="logo">
+      <div class="logo-icon">🌸</div>
+      <div class="logo-title">Blossom</div>
+      <div class="logo-sub">Your Cozy Sanctuary</div>
+    </div>
+    <div class="nav-section">
+      <div class="nav-label">Menu</div>
+      <div class="nav-item active" onclick="setView('tasks')" id="nav-tasks">
+        <span class="nav-icon">📋</span> My Tasks
+        <span class="nav-badge" id="pendingBadge">0</span>
+      </div>
+      <div class="nav-item" onclick="setView('habits')" id="nav-habits">
+        <span class="nav-icon">🌿</span> Habits
+      </div>
+      <div class="nav-item" onclick="setView('stats')" id="nav-stats">
+        <span class="nav-icon">📊</span> Stats
+      </div>
+      <div class="nav-item" onclick="setView('relax')" id="nav-relax">
+        <span class="nav-icon">🎵</span> Relax
+      </div>
+    </div>
+    <div class="nav-section">
+      <div class="nav-label">Tools</div>
+      <div class="nav-item" onclick="enterFocus()">
+        <span class="nav-icon">🎯</span> Focus Mode
+      </div>
+      <div class="nav-item" onclick="openModal()">
+        <span class="nav-icon">✚</span> Add Task
+      </div>
+    </div>
+    <div class="sidebar-footer">
+      <div class="theme-toggle" onclick="toggleTheme()">
+        <span>🌙</span>
+        <div class="theme-indicator"><div class="theme-dot"></div></div>
+        <span>Auto Theme</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <main class="main">
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+      <div class="greeting">
+        <div class="greeting-main" id="greetingMain">Good morning, lovely 🌸</div>
+        <div class="greeting-sub" id="greetingSub">Sunday · Jun 7, 2026</div>
+      </div>
+      <div class="topbar-actions">
+        <div class="search-box">
+          <span>🔍</span>
+          <input type="text" placeholder="Search tasks..." id="searchInput" oninput="filterTasks()">
+        </div>
+        <div class="icon-btn" onclick="openModal()" title="Add Task">✚</div>
+        <div class="icon-btn" onclick="enterFocus()" title="Focus Mode">🎯</div>
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content" id="mainContent">
+      <!-- VIEW: TASKS -->
+      <div id="viewTasks">
+        <!-- Stats Row -->
+        <div class="stats-row">
+          <div class="stat-card" style="animation-delay:0.05s">
+            <div class="stat-icon">📋</div>
+            <div class="stat-num" id="statTotal">0</div>
+            <div class="stat-label">Total Tasks</div>
+          </div>
+          <div class="stat-card" style="animation-delay:0.1s">
+            <div class="stat-icon">✅</div>
+            <div class="stat-num" id="statDone">0</div>
+            <div class="stat-label">Completed</div>
+          </div>
+          <div class="stat-card" style="animation-delay:0.15s">
+            <div class="stat-icon">⏳</div>
+            <div class="stat-num" id="statPending">0</div>
+            <div class="stat-label">Pending</div>
+          </div>
+          <div class="stat-card" style="animation-delay:0.2s">
+            <div class="stat-icon">🔥</div>
+            <div class="stat-num" id="statStreak">0</div>
+            <div class="stat-label">Day Streak</div>
+          </div>
+        </div>
+
+        <!-- Progress -->
+        <div class="progress-bar-wrap" style="animation:fadeSlideUp 0.5s 0.25s both">
+          <div class="progress-label">
+            <span class="progress-text">Today's Progress 🌸</span>
+            <span class="progress-pct" id="progressPct">0%</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" id="progressFill" style="width:0%"></div>
+          </div>
+        </div>
+
+        <!-- Daily Goal -->
+        <div class="card" style="animation:fadeSlideUp 0.5s 0.3s both">
+          <div class="section-header">
+            <div class="section-title"><span>🎯</span> Daily Goal</div>
+          </div>
+          <div class="goal-row">
+            <div>
+              <div class="goal-num" id="goalCompNum">0</div>
+              <div class="goal-of">completed</div>
+            </div>
+            <span style="color:var(--text-muted);font-size:1.2rem">/</span>
+            <div>
+              <div class="goal-num" id="goalTargetNum">5</div>
+              <div class="goal-of">goal</div>
+            </div>
+            <input type="range" class="goal-slider" min="1" max="20" value="5" id="goalSlider" oninput="updateGoal(this.value)">
+          </div>
+        </div>
+
+        <!-- Filter + Task List -->
+        <div style="animation:fadeSlideUp 0.5s 0.35s both">
+          <div class="section-header" style="margin-bottom:10px">
+            <div class="section-title"><span>📋</span> Tasks</div>
+            <button class="btn btn-primary btn-sm" onclick="openModal()">✚ Add</button>
+          </div>
+          <div class="filter-row" id="filterRow">
+            <div class="chip active" onclick="setFilter('all',this)">All</div>
+            <div class="chip" onclick="setFilter('pending',this)">Pending</div>
+            <div class="chip" onclick="setFilter('done',this)">Done</div>
+            <div class="chip" onclick="setFilter('high',this)">🔴 High</div>
+            <div class="chip" onclick="setFilter('work',this)">Work</div>
+            <div class="chip" onclick="setFilter('personal',this)">Personal</div>
+            <div class="chip" onclick="setFilter('health',this)">Health</div>
+            <div class="chip" onclick="setFilter('study',this)">Study</div>
+          </div>
+          <div class="tasks-container" id="taskList"></div>
+        </div>
+      </div>
+
+      <!-- VIEW: HABITS -->
+      <div id="viewHabits" style="display:none">
+        <div class="section-title" style="margin-bottom:16px"><span>🌿</span> Habit Tracker</div>
+        <div class="card">
+          <div id="habitList"></div>
+          <button class="btn btn-ghost btn-sm" onclick="addHabit()" style="margin-top:10px">✚ Add Habit</button>
+        </div>
+        <!-- Mood Tracker -->
+        <div class="card" style="margin-top:16px">
+          <div class="section-title" style="margin-bottom:4px"><span>🌈</span> Today's Mood</div>
+          <div style="font-size:0.8rem;color:var(--text-muted);margin-bottom:2px">How are you feeling right now?</div>
+          <div class="mood-row" id="moodRow">
+            <button class="mood-btn" onclick="setMood('😊')" title="Happy">😊</button>
+            <button class="mood-btn" onclick="setMood('🌸')" title="Calm">🌸</button>
+            <button class="mood-btn" onclick="setMood('😌')" title="Peaceful">😌</button>
+            <button class="mood-btn" onclick="setMood('😤')" title="Focused">😤</button>
+            <button class="mood-btn" onclick="setMood('😴')" title="Tired">😴</button>
+            <button class="mood-btn" onclick="setMood('😢')" title="Sad">😢</button>
+            <button class="mood-btn" onclick="setMood('✨')" title="Energized">✨</button>
+          </div>
+          <div id="moodLabel" style="text-align:center;font-size:0.82rem;color:var(--text-muted);margin-top:8px"></div>
+        </div>
+      </div>
+
+      <!-- VIEW: STATS -->
+      <div id="viewStats" style="display:none">
+        <div class="section-title" style="margin-bottom:16px"><span>📊</span> Productivity Stats</div>
+        <div class="grid-2">
+          <div class="card">
+            <div class="section-title" style="font-size:1rem;margin-bottom:12px"><span>📅</span> This Week</div>
+            <div id="weekChart" style="display:flex;align-items:flex-end;gap:8px;height:80px;padding:4px 0"></div>
+            <div style="display:flex;justify-content:space-around;margin-top:6px;font-size:0.7rem;color:var(--text-muted)" id="weekLabels"></div>
+          </div>
+          <div class="card">
+            <div class="section-title" style="font-size:1rem;margin-bottom:12px"><span>🏆</span> Achievements</div>
+            <div id="achievementsList"></div>
+          </div>
+        </div>
+        <div class="card" style="margin-top:16px">
+          <div class="section-title" style="font-size:1rem;margin-bottom:10px"><span>📈</span> Category Breakdown</div>
+          <div id="catBreakdown"></div>
+        </div>
+      </div>
+
+      <!-- VIEW: RELAX -->
+      <div id="viewRelax" style="display:none">
+        <div class="section-title" style="margin-bottom:16px"><span>🎵</span> Relaxation Corner</div>
+        <div class="grid-2">
+          <div class="card pomodoro-card">
+            <div class="section-title" style="justify-content:center;font-size:1rem"><span>🍅</span> Pomodoro</div>
+            <div class="pomodoro-phase" id="pomPhase">FOCUS SESSION</div>
+            <div class="pomodoro-display" id="pomDisplay">25:00</div>
+            <div class="pomodoro-btns">
+              <button class="btn btn-ghost btn-sm" onclick="togglePomodoro()" id="pomBtn">▶ Start</button>
+              <button class="btn btn-ghost btn-sm" onclick="resetPomodoro()">↺ Reset</button>
+              <button class="btn btn-ghost btn-sm" onclick="skipPomodoro()">⏭ Skip</button>
+            </div>
+            <div style="margin-top:12px;font-size:0.75rem;color:var(--text-muted)">Session #<span id="pomCount">1</span></div>
+          </div>
+          <div class="card">
+            <div class="section-title" style="font-size:1rem;margin-bottom:4px"><span>🎵</span> Ambient Sounds</div>
+            <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:8px">Click to play relaxing sounds</div>
+            <div class="sound-btns">
+              <button class="sound-btn" onclick="toggleSound('ocean')" id="btn-ocean">
+                <span class="sound-icon">🌊</span>Ocean Waves
+              </button>
+              <button class="sound-btn" onclick="toggleSound('rain')" id="btn-rain">
+                <span class="sound-icon">🌧️</span>Soft Rain
+              </button>
+              <button class="sound-btn" onclick="toggleSound('cafe')" id="btn-cafe">
+                <span class="sound-icon">☕</span>Café Ambience
+              </button>
+              <button class="sound-btn" onclick="toggleSound('forest')" id="btn-forest">
+                <span class="sound-icon">🌿</span>Forest Birds
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card" style="margin-top:16px">
+          <div class="section-title" style="font-size:1rem;margin-bottom:8px"><span>💬</span> Daily Inspiration</div>
+          <div class="quote-box" id="quoteBox">
+            <div id="quoteText">Loading your daily inspiration...</div>
+            <div class="quote-author" id="quoteAuthor"></div>
+          </div>
+          <button class="btn btn-ghost btn-sm" onclick="newQuote()" style="margin-top:10px">✨ New Quote</button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+  <!-- App Logic -->
+  <script src="js/app.js"></script>
+</body>
+</html>

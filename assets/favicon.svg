@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFD6E8"/>
+      <stop offset="100%" stop-color="#EDE7FF"/>
+    </radialGradient>
+    <radialGradient id="petalGrad" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#FFB3D1"/>
+      <stop offset="100%" stop-color="#C9B8FF"/>
+    </radialGradient>
+    <radialGradient id="centerGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF4B8"/>
+      <stop offset="100%" stop-color="#FFD6E8"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="30" fill="url(#bgGrad)" opacity="0.9"/>
+
+  <!-- Petals (5-petal cherry blossom) -->
+  <!-- Petal 1 - top -->
+  <ellipse cx="32" cy="17" rx="6" ry="10" fill="url(#petalGrad)" transform="rotate(0 32 32)" opacity="0.92"/>
+  <!-- Petal 2 - top right -->
+  <ellipse cx="32" cy="17" rx="6" ry="10" fill="url(#petalGrad)" transform="rotate(72 32 32)" opacity="0.92"/>
+  <!-- Petal 3 - bottom right -->
+  <ellipse cx="32" cy="17" rx="6" ry="10" fill="url(#petalGrad)" transform="rotate(144 32 32)" opacity="0.92"/>
+  <!-- Petal 4 - bottom left -->
+  <ellipse cx="32" cy="17" rx="6" ry="10" fill="url(#petalGrad)" transform="rotate(216 32 32)" opacity="0.92"/>
+  <!-- Petal 5 - top left -->
+  <ellipse cx="32" cy="17" rx="6" ry="10" fill="url(#petalGrad)" transform="rotate(288 32 32)" opacity="0.92"/>
+
+  <!-- Center circle -->
+  <circle cx="32" cy="32" r="8" fill="url(#centerGrad)"/>
+
+  <!-- Tiny stamens dots -->
+  <circle cx="32" cy="26" r="1.2" fill="#FFB3D1"/>
+  <circle cx="36" cy="28" r="1.2" fill="#C9B8FF"/>
+  <circle cx="36" cy="33" r="1.2" fill="#A8DEFF"/>
+  <circle cx="33" cy="36" r="1.2" fill="#FFB3D1"/>
+  <circle cx="29" cy="36" r="1.2" fill="#C9B8FF"/>
+  <circle cx="28" cy="33" r="1.2" fill="#A8DEFF"/>
+  <circle cx="28" cy="28" r="1.2" fill="#FFB3D1"/>
+</svg>
