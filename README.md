@@ -64,16 +64,16 @@ Distraction-free full-screen focus experience.
 ---
 
 ## 📁 Project Structure
-.
+
 ├── index.html
-├── css/
-├── js/
-├── assets/
-├── dashboard.png
-├── habits.png
-├── stats.png
-├── relax.png
-├── focus.png
+├── css/              # Stylesheets
+├── js/               # JavaScript logic
+├── assets/           # Icons, sounds, and other static assets
+├── dashboard.png     # App screenshot (Dashboard)
+├── habits.png        # App screenshot (Habits)
+├── stats.png         # App screenshot (Stats)
+├── relax.png         # App screenshot (Relaxation)
+├── focus.png         # App screenshot (Focus Mode)
 └── README.md
 ## 🚀 Notes
 
