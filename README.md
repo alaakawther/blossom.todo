@@ -1,46 +1,103 @@
-# 🌸 Blossom — Your Cozy Productivity Sanctuary
+# 🌸 Blossom — Cozy Productivity App
 
-Blossom is a beautifully designed, all-in-one productivity web application crafted to help you balance structure and mindfulness. It combines traditional task tracking with habit building, visual analytics, immersive focus sessions, and a relaxing ambient soundscape to create a calm, stress-free workspace.
+Blossom is a calm and modern productivity web app designed to help you stay organized while keeping a healthy balance with mindfulness.  
+It combines task tracking, habit building, productivity analytics, and a relaxing focus environment in one place.
 
-Live Demo: [blossom-todo.vercel.app](https://blossom-todo.vercel.app)
+🔗 Live Demo: https://blossom-todo.vercel.app
 
 ---
 
 ## ✨ Features
 
-* **Task Management & Goals:** Organize tasks by category, track daily progress percentages, and set dynamic daily goals.
-* **Habit & Mood Tracking:** Build consistent daily routines with streak tracking and log your mood to stay mindful of your mental well-being.
-* **Productivity Analytics:** Visualize your weekly performance with clean, intuitive bar charts and unlock achievements as you hit milestones.
-* **Relaxation Corner:** Unwind or focus with an integrated Pomodoro timer and custom ambient background sounds like Ocean Waves, Soft Rain, and Café Ambience.
-* **Immersive Focus Mode:** Eliminate distractions with a minimalist, full-screen countdown interface tailored to your active task.
+- **Task Management**
+  Organize your daily tasks, track progress, and stay focused on what matters.
+
+- **Habit & Mood Tracking**
+  Build consistent routines with streak tracking and log your daily mood to stay mindful of your well-being.
+
+- **Productivity Analytics**
+  Visualize your weekly performance with simple charts and track your progress over time.
+
+- **Relaxation Mode**
+  Use a Pomodoro timer combined with ambient sounds like rain, ocean waves, and café noise to improve focus.
+
+- **Focus Mode**
+  A distraction-free full-screen mode that helps you concentrate on one task at a time.
 
 ---
 
-## 📸 App Preview & Interface
+## 📸 App Preview
 
-### 🎛️ Dashboard & Task Management
-Stay on top of your day with an overview of your total, completed, and pending tasks alongside a dynamic daily goal progress bar.
-![Dashboard & Task Management](screenshots/dashboard.jpg)
+### Dashboard & Task Management
+Overview of your tasks, progress, and daily goals.
+![Dashboard](screenshots/dashboard.png)
 
-### 🌿 Habit Tracker & Mood Logging
-Build long-term routines with multi-day streak tracking and log how you feel throughout the day with intuitive mood icons.
-![Habit Tracker & Mood Logging](screenshots/habits.jpg)
+---
 
-### 📊 Productivity Stats & Achievements
-Monitor your weekly output with visual data distributions and stay motivated by unlocking productivity badges.
-![Productivity Stats & Achievements](screenshots/stats.jpg)
+### Habit Tracker & Mood Logging
+Track habits and monitor your emotional well-being over time.
+![Habits](screenshots/habits.png)
 
-### 🌊 Relaxation Corner & Ambient Sounds
-Curate your perfect focus environment by pairing a custom Pomodoro session with layered, high-quality audio backdrops.
-![Relaxation Corner & Ambient Sounds](screenshots/relax.jpg)
+---
 
-### ⏱️ Immersive Focus Mode
-Strip away the clutter. Focus Mode centers your attention entirely on the current timer and your specific intention.
-![Immersive Focus Mode](screenshots/focus.jpg)
+### Productivity Stats & Achievements
+Weekly insights and productivity breakdowns with achievements.
+![Stats](screenshots/stats.png)
+
+---
+
+### Relaxation Corner
+Pomodoro timer with ambient background sounds for deep focus sessions.
+![Relax](screenshots/relax.png)
+
+---
+
+### Immersive Focus Mode
+Minimal interface designed to eliminate distractions.
+![Focus](screenshots/focus.png)
 
 ---
 
 ## 🛠️ Built With
 
-* **Frontend:** HTML5, CSS3 (Custom Glassmorphism styling), JavaScript (ES6+)
-* **Deployment:** Vercel
+- HTML5
+- CSS3 (Glassmorphism UI design)
+- JavaScript (ES6+)
+- Deployed on Vercel
+
+---
+
+## 📁 Project Structure
+├── index.html
+├── css/
+│ └── style files
+├── js/
+│ └── JavaScript files
+├── assets/
+│ └── (icons, sounds, etc.)
+├── dashboard.png
+├── habits.png
+├── stats.png
+├── relax.png
+├── focus.png
+└── README.md
+
+---
+
+## 🚀 What I Learned
+
+Building Blossom helped me improve:
+- UI/UX design consistency
+- State management in vanilla JavaScript
+- Creating calming user experiences
+- Structuring a real-world frontend project
+
+---
+
+## 📌 Notes
+
+This project is continuously improving. Future updates may include:
+- PWA support
+- Cloud sync (Firebase)
+
+---
