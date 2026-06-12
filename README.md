@@ -63,8 +63,9 @@ Distraction-free full-screen focus experience.
 
 ---
 
-## 📁 Project Structure
+### 📂 Project Structure
 
+```text
 .
 ├── index.html
 ├── css/
@@ -73,13 +74,12 @@ Distraction-free full-screen focus experience.
 │   └── script.js
 ├── assets/
 │   └── (icons, sounds, etc.)
-
-├── dashboard.png
-├── habits.png
-├── stats.png
-├── relax.png
-├── focus.png
-
+├── screenshots/
+│   ├── dashboard.png
+│   ├── habits.png
+│   ├── stats.png
+│   ├── relax.png
+│   └── focus.png
 └── README.md
 ## 🚀 Notes
 
